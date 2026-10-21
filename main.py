@@ -9,6 +9,8 @@ with open("YA_Books.csv", mode="r", encoding="utf-8") as bookfile:
     # skip the header row
     header = next(books)
     # Author col is at index 1
+    
+    UserInput = input("What would you liek to see? (lowest rating/highest rating/Recent book): ", )
 
     MINyear = 0
     CurMIN_rating = 5
@@ -42,9 +44,12 @@ with open("YA_Books.csv", mode="r", encoding="utf-8") as bookfile:
             CurHI_rating = rating
             HI_rating = row
 
-    print(f"the WORST, absolute BUNS and TRASH book: \n{LOWrating}")
-    print(f"most recent book: \n{MostREC_book}")
-    print(f"the book with the highest rating is: \n'{HI_rating[0]}' by {HI_rating[1]} with a rating of {HI_rating[6]}")
+    if UserInput == "lowest rating":
+        print(f"the WORST, absolute BUNS and TRASH book: \n{LOWrating}")
+    elif UserInput == "most recent":
+        print(f"most recent book: \n{MostREC_book}")
+    elif UserInput == "highest rating":
+        print(f"the book with the highest rating is: \n'{HI_rating[0]}' by {HI_rating[1]} with a rating of {HI_rating[6]}")
     print(year) 
 
 
