@@ -44,7 +44,7 @@ with open("YA_Books.csv", mode="r", encoding="utf-8") as bookfile:
 
     print(f"the WORST, absolute BUNS and TRASH book: \n{LOWrating}")
     print(f"most recent book: \n{MostREC_book}")
-    print(f"highest rating: \n{HI_rating[6]}")
+    print(f"the book with the highest rating is: \n'{HI_rating[0]}' by {HI_rating[1]} with a rating of {HI_rating[6]}")
     print(year) 
 
 
